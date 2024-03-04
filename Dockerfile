@@ -7,6 +7,8 @@ WORKDIR /app
 
 RUN apk add postgresql-client build-base postgresql-dev
 
+RUN apk add libffi libffi-dev
+
 RUN pip install -r /app/requirements.txt
 
 RUN adduser --disabled-password app-user
